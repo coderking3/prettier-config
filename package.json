@@ -1,0 +1,45 @@
+{
+  "name": "@king-3/prettier-config",
+  "version": "1.0.6",
+  "description": "This is my prettier config",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/coderking3/prettier-config#readme",
+  "bugs": {
+    "url": "https://github.com/coderking3/prettier-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderking3/prettier-config.git"
+  },
+  "author": "king3 <w2196592083@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown --clean --dts",
+    "format": "prettier . --write",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "release": "bumpp && pnpm publish",
+    "release:beta": "bumpp && pnpm publish --tag=beta"
+  },
+  "devDependencies": {
+    "@king-3/eslint-config": "^1.0.6",
+    "@types/node": "^24.5.2",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.36.0",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.15.5"
+  }
+}
