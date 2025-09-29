@@ -1,18 +1,7 @@
-import type { PrettierConfig } from './types'
+import { king3 } from './config'
 
-export const king3 = (config: PrettierConfig = {}) => {
-  const { printWidth = 80 } = config
-
-  const prettierConfig: PrettierConfig = {
-    printWidth,
-    semi: false,
-    singleQuote: true,
-    tabWidth: 2,
-    trailingComma: 'none',
-    useTabs: false
-  }
-
-  return prettierConfig
-}
+export { king3 as defineConfig, king3 }
 
 export default king3
+
+export * from './types'
