@@ -1,7 +1,7 @@
 # @king-3/prettier-config
 
-[![npm version](https://img.shields.io/npm/v/@king-3/eslint-config.svg)](https://npmjs.com/package/@king-3/eslint-config)
-[![npm downloads](https://img.shields.io/npm/dm/@king-3/eslint-config)](https://www.npmcharts.com/compare/@king-3/eslint-config?interval=30)
+[![npm version](https://img.shields.io/npm/v/@king-3/prettier-config.svg)](https://npmjs.com/package/@king-3/prettier-config)
+[![npm downloads](https://img.shields.io/npm/dm/@king-3/prettier-config)](https://www.npmcharts.com/compare/@king-3/prettier-config?interval=30)
 
 Prettier config.
 
