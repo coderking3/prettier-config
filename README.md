@@ -1,7 +1,7 @@
 # @king-3/prettier-config
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![npm version](https://img.shields.io/npm/v/@king-3/eslint-config.svg)](https://npmjs.com/package/@king-3/eslint-config)
+[![npm downloads](https://img.shields.io/npm/dm/@king-3/eslint-config)](https://www.npmcharts.com/compare/@king-3/eslint-config?interval=30)
 
 Prettier config.
 
@@ -35,10 +35,3 @@ export default king3({
 ## License
 
 [MIT](./LICENSE) License © 2025-PRESENT [King3](https://github.com/coderking3)
-
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/@king-3/prettier-config.svg
-[npm-version-href]: https://npmjs.com/package/@king-3/prettier-config
-[npm-downloads-src]: https://img.shields.io/npm/dm/@king-3/prettier-config
-[npm-downloads-href]: https://www.npmcharts.com/compare/@king-3/prettier-config?interval=30
