@@ -1,3 +1,3 @@
 import type { Config } from 'prettier'
 
-export type { Config as PrettierConfig }
+export type PrettierConfig = Config
