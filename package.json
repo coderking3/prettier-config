@@ -35,7 +35,7 @@
     "release:beta": "bumpp && pnpm publish --tag=beta"
   },
   "devDependencies": {
-    "@king-3/eslint-config": "^1.0.6",
+    "@king-3/eslint-config": "^1.0.8",
     "@types/node": "^24.5.2",
     "bumpp": "^10.2.3",
     "eslint": "^9.36.0",
