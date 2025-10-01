@@ -27,7 +27,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsdown --clean --dts",
+    "build": "tsdown",
     "format": "prettier . --write",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
