@@ -16,7 +16,7 @@ try {
   console.log(bold(cyan('\n🚀 Starting build...\n')))
   console.log(yellow('📦 Running tsdown build...'))
 
-  execSync('tsdown', { stdio: 'inherit' }) // tsdown 会自己输出，不加多余空行
+  execSync('tsdown', { stdio: 'inherit' })
 
   // Rename index.d.mts → index.d.ts
   if (existsSync(getDtsPath(sourceDts))) {
