@@ -16,30 +16,34 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./package.json": "./package.json"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "tsdown",
-    "format": "prettier . --write",
+    "build": "tsx scripts/build.ts",
+    "format": "NODE_OPTIONS='--experimental-strip-types' prettier . --write",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "release": "bumpp && pnpm publish",
-    "release:beta": "bumpp && pnpm publish --tag=beta"
+    "release": "bumpp"
   },
   "devDependencies": {
-    "@king-3/eslint-config": "^1.0.8",
-    "@types/node": "^24.5.2",
+    "@king-3/eslint-config": "^3.1.0",
+    "@types/node": "^24.10.1",
+    "ansis": "^4.2.0",
     "bumpp": "^10.2.3",
     "eslint": "^9.36.0",
     "prettier": "^3.6.2",
-    "tsdown": "^0.15.5"
+    "tsdown": "^0.16.5",
+    "tsx": "^4.20.6"
   }
 }
