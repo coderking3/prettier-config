@@ -16,26 +16,25 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
+    ".": "./dist/index.js"
   },
+  "bin": "./bin/index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "tsx scripts/build.ts",
-    "build:config": "tsx scripts/config.ts",
+    "generate": "tsx scripts/generate.ts",
     "format": "prettier . --write",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "release": "bumpp"
+  },
+  "dependencies": {
+    "@prettier/plugin-oxc": "^0.0.5"
   },
   "devDependencies": {
     "@king-3/eslint-config": "^3.1.0",
