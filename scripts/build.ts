@@ -45,7 +45,7 @@ function formatError(error: unknown): string {
  */
 function build() {
   try {
-    console.log(bold(cyan('\n🚀 Starting build...\n')))
+    console.log(bold(cyan('\n🚀 Starting build script...\n')))
     console.log(yellow('📦 Running tsdown build...'))
 
     execSync('tsdown', { stdio: 'inherit' })
