@@ -59,14 +59,14 @@ pnpm format:check  # 检查格式化而不修改文件
 
 ### 默认设置
 
-```js
+```json
 {
-  printWidth: 80,
-  semi: false,
-  singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'none',
-  useTabs: false
+  "printWidth": 80,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false
 }
 ```
 

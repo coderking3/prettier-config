@@ -59,14 +59,14 @@ pnpm format:check  # Check formatting without modifying files
 
 ### Default Settings
 
-```js
+```json
 {
-  printWidth: 80,
-  semi: false,
-  singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'none',
-  useTabs: false
+  "printWidth": 80,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false
 }
 ```
 
