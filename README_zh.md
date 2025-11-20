@@ -1,6 +1,6 @@
 # @king-3/prettier-config
 
-> A minimal and opinionated Prettier config preset with sensible defaults.
+> 一个简洁且固执己见的 Prettier 配置预设，提供合理的默认设置。
 
 [![npm version](https://img.shields.io/npm/v/@king-3/prettier-config.svg)](https://www.npmjs.com/package/@king-3/prettier-config)
 [![npm downloads](https://img.shields.io/npm/dm/@king-3/prettier-config.svg)](https://www.npmjs.com/package/@king-3/prettier-config)
@@ -9,24 +9,24 @@
 
 [English](./README.md) | [中文](./README_zh.md)
 
-## Features
+## ✨ 特性
 
-- **📏 2 spaces indentation** - Consistent and readable
-- **🚫 No semicolons** - Cleaner code style
-- **✨ Single quotes** - Less visual noise
-- **📝 No trailing commas** - Simplified syntax
-- **🎯 Smart ignore patterns** - Automatically skips common build artifacts and lock files
-- **⚡ Powered by @prettier/plugin-oxc** - Faster formatting with Oxlint
+- **📏 2 空格缩进** - 统一且易读
+- **🚫 无分号** - 更清爽的代码风格
+- **✨ 单引号** - 减少视觉干扰
+- **📝 无尾随逗号** - 简化语法
+- **🎯 智能忽略模式** - 自动跳过常见的构建产物和锁文件
+- **⚡ 基于 @prettier/plugin-oxc** - 使用 Oxlint 实现更快的格式化
 
-## Installation
+## 📦 安装
 
-### Quick Setup
+### 快速开始
 
 ```bash
 pnpm add -D prettier @king-3/prettier-config
 ```
 
-Create a `prettier.config.mjs` file in your project root:
+在项目根目录创建 `prettier.config.mjs` 文件：
 
 ```js
 // prettier.config.mjs
@@ -35,9 +35,9 @@ import king3 from '@king-3/prettier-config'
 export default king3()
 ```
 
-### Add Format Scripts
+### 添加格式化脚本
 
-Add these scripts to your `package.json`:
+在 `package.json` 中添加以下脚本：
 
 ```json
 {
@@ -48,16 +48,16 @@ Add these scripts to your `package.json`:
 }
 ```
 
-Then run:
+然后运行：
 
 ```bash
-pnpm format        # Format all files
-pnpm format:check  # Check formatting without modifying files
+pnpm format        # 格式化所有文件
+pnpm format:check  # 检查格式化而不修改文件
 ```
 
-## Configuration
+## ⚙️ 配置
 
-### Default Settings
+### 默认设置
 
 ```js
 {
@@ -70,9 +70,9 @@ pnpm format:check  # Check formatting without modifying files
 }
 ```
 
-### Custom Configuration
+### 自定义配置
 
-Override any default setting:
+覆盖任何默认设置：
 
 ```js
 // prettier.config.mjs
@@ -81,13 +81,13 @@ import { king3 } from '@king-3/prettier-config'
 export default king3({
   printWidth: 120,
   semi: true
-  // ... other Prettier options
+  // ... 其他 Prettier 选项
 })
 ```
 
-### Ignored Files
+### 忽略的文件
 
-The following patterns are automatically ignored:
+以下模式会被自动忽略：
 
 ```
 **/node_modules/**
@@ -112,11 +112,11 @@ output/**
 **/pnpm-lock.yaml
 ```
 
-## Editor Integration
+## 🔧 编辑器集成
 
 ### VS Code
 
-Install the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and add to your `.vscode/settings.json`:
+安装 [Prettier 扩展](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) 并在 `.vscode/settings.json` 中添加：
 
 ```json
 {
@@ -125,6 +125,6 @@ Install the [Prettier extension](https://marketplace.visualstudio.com/items?item
 }
 ```
 
-## License
+## 📄 许可证
 
-[MIT](./LICENSE) License © 2025-PRESENT [king3](https://github.com/coderking3)
+[MIT](./LICENSE) License © 2025-至今 [king3](https://github.com/coderking3)
