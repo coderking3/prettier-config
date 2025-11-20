@@ -1,6 +1,6 @@
 {
   "name": "@king-3/prettier-config",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "This is my prettier config",
   "type": "module",
   "license": "MIT",
