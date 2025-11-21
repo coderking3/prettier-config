@@ -7,10 +7,7 @@ import process from 'node:process'
 import { bold, cyan, dim, green, magenta, red, yellow } from 'ansis'
 
 // File rename configuration
-const RENAME_MAP = [
-  { from: 'index.d.mts', to: 'index.d.ts' },
-  { from: 'index.mjs', to: 'index.js' },
-] as const
+const RENAME_MAP = [{ from: 'index.d.mts', to: 'index.d.ts' }] as const
 
 const distDir = join(process.cwd(), 'dist')
 
@@ -28,13 +25,11 @@ function renameFile(from: string, to: string): boolean {
 
   try {
     renameSync(sourcePath, targetPath)
-    console.log(
-       green('🔁 Renamed ') + cyan(from) + dim(' → ') + magenta(to)
-    )
+    console.log(green('🔁 Renamed ') + cyan(from) + dim(' → ') + magenta(to))
     return true
   } catch (error) {
     console.error(
-        bold(red('❌ Failed to rename ')) +
+      bold(red('❌ Failed to rename ')) +
         cyan(from) +
         red(': ') +
         red(formatError(error))
