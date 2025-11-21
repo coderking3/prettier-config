@@ -7,6 +7,8 @@ export const DEFAULT_CONFIG = {
   useTabs: false
 } as const
 
+export const PRESET_PLUGINS = ['@prettier/plugin-oxc']
+
 export const IGNORE_FILES = [
   '**/node_modules/**',
   '**/dist/**',

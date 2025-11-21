@@ -1,13 +1,17 @@
 import type { PrettierConfig } from './types'
-import { fileURLToPath } from 'node:url'
-import { DEFAULT_CONFIG, IGNORE_FILES } from './constants'
 
-export const king3 = (
-  userConfig: Omit<PrettierConfig, 'overrides' | 'plugins'> = {}
-) => {
+import { DEFAULT_CONFIG, IGNORE_FILES, PRESET_PLUGINS } from './constants'
+
+export const king3 = (userConfig: PrettierConfig = {}) => {
+  const {
+    overrides: userOverrides,
+    plugins: userPlugins,
+    ...config
+  } = userConfig
+
   const prettierConfig: PrettierConfig = {
     ...DEFAULT_CONFIG,
-    ...userConfig,
+    ...config,
     overrides: [
       {
         files: [...IGNORE_FILES],
@@ -16,10 +20,14 @@ export const king3 = (
       {
         files: ['**/jsr.json'],
         options: { parser: 'json-stringify' }
-      }
+      },
+      ...(Array.isArray(userOverrides) ? userOverrides : [])
     ],
 
-    plugins: [fileURLToPath(import.meta.resolve('@prettier/plugin-oxc'))]
+    plugins: [
+      ...PRESET_PLUGINS,
+      ...(Array.isArray(userPlugins) ? userPlugins : [])
+    ]
   } satisfies PrettierConfig
 
   return prettierConfig
