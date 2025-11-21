@@ -37,7 +37,7 @@
     "@prettier/plugin-oxc": "^0.0.5"
   },
   "devDependencies": {
-    "@king-3/eslint-config": "^4.0.0",
+    "@king-3/eslint-config": "^4.1.0",
     "@types/node": "^24.10.1",
     "ansis": "^4.2.0",
     "bumpp": "^10.2.3",
