@@ -26,7 +26,6 @@
       "import": "./dist/index.mjs"
     }
   },
-  "bin": "./bin/index.js",
   "publishConfig": {
     "access": "public"
   },
