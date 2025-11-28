@@ -1,6 +1,6 @@
 import type { PrettierConfig } from './types'
 
-import { DEFAULT_CONFIG, IGNORE_FILES, PRESET_PLUGINS } from './constants'
+import { DEFAULT_CONFIG, IGNORE_FILES } from './constants'
 
 export const king3 = (userConfig: PrettierConfig = {}) => {
   const {
@@ -24,10 +24,7 @@ export const king3 = (userConfig: PrettierConfig = {}) => {
       ...(Array.isArray(userOverrides) ? userOverrides : [])
     ],
 
-    plugins: [
-      ...PRESET_PLUGINS,
-      ...(Array.isArray(userPlugins) ? userPlugins : [])
-    ]
+    ...(Array.isArray(userPlugins) ? { plugins: userPlugins } : {})
   } satisfies PrettierConfig
 
   return prettierConfig

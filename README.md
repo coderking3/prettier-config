@@ -16,7 +16,6 @@
 - **✨ Single quotes** - Less visual noise
 - **📝 No trailing commas** - Simplified syntax
 - **🎯 Smart ignore patterns** - Automatically skips common build artifacts and lock files
-- **⚡ Powered by @prettier/plugin-oxc** - Faster formatting with Oxlint
 
 ## Installation
 

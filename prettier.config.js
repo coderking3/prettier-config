@@ -9,8 +9,6 @@ const DEFAULT_CONFIG = {
   useTabs: false
 }
 
-const PRESET_PLUGINS = ['@prettier/plugin-oxc']
-
 const IGNORE_FILES = [
   '**/node_modules/**',
   '**/dist/**',
@@ -54,10 +52,7 @@ const king3 = (userConfig = {}) => {
       },
       ...(Array.isArray(userOverrides) ? userOverrides : [])
     ],
-    plugins: [
-      ...PRESET_PLUGINS,
-      ...(Array.isArray(userPlugins) ? userPlugins : [])
-    ]
+    ...(Array.isArray(userPlugins) ? { plugins: userPlugins } : {})
   }
 }
 
